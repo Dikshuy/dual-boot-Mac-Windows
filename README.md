@@ -1,7 +1,7 @@
 # Dual Booting Instructions
 
 
-# How to Dual Boot Windows and Linux (Ubuntu)
+# How to Dual Boot Windows and Linux (Ubuntu) [FREE]
 
 Dual-booting allows you to use both Windows and Linux on the same computer. Here's how to set it up.
 
@@ -137,3 +137,144 @@ Dual-booting allows you to use both Windows and Linux on the same computer. Here
 ---
 
 Enjoy your journey into Linux!
+
+---
+
+# How to Install Ubuntu on a Mac [PAID]
+
+Parallels Desktop allows you to run a virtual machine on your Mac, making it easy to install and use Ubuntu alongside macOS. This guide explains how to set up Ubuntu using Parallels on both Intel and M-series Macs.
+
+---
+
+## **1. Prerequisites**
+
+1. **Mac Requirements**:
+   - An Intel or M-series Mac with sufficient disk space (at least 20 GB free).
+   - Parallels Desktop installed (download from [Parallels website](https://www.parallels.com)).
+
+2. **Download Ubuntu**:
+   - Visit the [Ubuntu website](https://ubuntu.com/download/desktop) and download the correct version of Ubuntu:
+     - **Intel Macs**: Download the standard x86-64 version.
+     - **M-series Macs**: Download the ARM64 version.
+
+3. **Parallels Account**:
+   - Create a Parallels account if you don’t already have one.
+
+---
+
+## **2. Install Parallels Desktop**
+
+1. **Download Parallels**:
+   - Go to [Parallels Desktop](https://www.parallels.com) and download the installer.
+
+2. **Install Parallels**:
+   - Double-click the downloaded `.dmg` file.
+   - Drag the Parallels icon into the Applications folder.
+   - Open Parallels from the Applications folder and follow the setup instructions.
+
+3. **Activate Parallels**:
+   - Sign in to your Parallels account.
+   - Enter your license key if required.
+
+---
+
+## **3. Create a New Virtual Machine**
+
+1. **Launch Parallels**:
+   - Open Parallels Desktop and click **File > New** to create a new virtual machine.
+
+2. **Select Installation Source**:
+   - Choose **Install Windows or another OS from a DVD or image file** and click "Continue."
+
+3. **Locate Ubuntu ISO**:
+   - Click "Choose Manually" and select the Ubuntu ISO file you downloaded.
+
+4. **Choose Operating System**:
+   - Parallels should automatically detect Ubuntu. If not, select "Linux" and "Ubuntu" manually.
+
+5. **Set Up the Virtual Machine**:
+   - **Name**: Give your virtual machine a name (e.g., "Ubuntu VM").
+   - **Location**: Choose a location to store the VM files.
+
+6. **Customize Hardware (Optional)**:
+   - Allocate resources to the VM:
+     - **CPU**: 2 or more cores.
+     - **RAM**: At least 4 GB.
+     - **Disk Space**: 20 GB or more.
+     - **Graphics**: Leave as default.
+   - Click "Create."
+
+---
+
+## **4. Install Ubuntu**
+
+1. **Start the Virtual Machine**:
+   - Select your newly created virtual machine and click "Start."
+
+2. **Ubuntu Installation Process**:
+   - Select your language and click **Install Ubuntu.**
+   - Check **Download updates while installing Ubuntu** and **Install third-party software** (optional but recommended).
+   - Click **Continue.**
+
+3. **Partitioning**:
+   - Choose **Erase disk and install Ubuntu.** (This applies only to the virtual machine, not your Mac.)
+   - Click **Install Now** and confirm the changes.
+
+4. **Set Your Location**:
+   - Choose your time zone and click **Continue.**
+
+5. **Create a User Account**:
+   - Enter your name, a username, and a password. Click **Continue.**
+
+6. **Complete Installation**:
+   - Wait for the installation to complete.
+   - Click **Restart Now** when prompted and remove the ISO file from the virtual drive.
+
+---
+
+## **5. Optimize Ubuntu in Parallels**
+
+1. **Install Parallels Tools**:
+   - Once Ubuntu boots, click **Actions > Install Parallels Tools** from the Parallels menu.
+   - Open the mounted Parallels Tools CD in Ubuntu and follow the installation instructions.
+
+2. **Adjust Display Settings**:
+   - Go to **Settings > Displays** in Ubuntu and configure the resolution as needed.
+
+3. **Enable Clipboard Sharing and Drag & Drop**:
+   - Ensure clipboard sharing and file drag & drop are enabled in the Parallels VM settings.
+
+---
+
+## **6. Post-Installation Steps**
+
+1. **Update Ubuntu**:
+   - Open a terminal (Ctrl+Alt+T) and run:
+     ```bash
+     sudo apt update && sudo apt upgrade
+     ```
+
+2. **Install Additional Software**:
+   - Use the "Ubuntu Software" app to download any tools or applications you need.
+
+3. **Shared Folders**:
+   - Configure shared folders between macOS and Ubuntu in the Parallels settings.
+
+---
+
+## **Tips and Troubleshooting**
+
+1. **VM Performance**:
+   - If Ubuntu is slow, allocate more CPU cores or RAM to the virtual machine via the Parallels settings.
+
+2. **Networking Issues**:
+   - Check the VM's network adapter settings and ensure it’s set to "Shared Network" for internet access.
+
+3. **Switch Between macOS and Ubuntu**:
+   - Parallels allows you to run Ubuntu in "Coherence Mode," where Ubuntu apps run like native macOS apps. Enable it from the Parallels menu.
+
+---
+
+With Parallels Desktop, you can use Ubuntu on your Mac while enjoying the flexibility of macOS. Happy exploring!
+
+
