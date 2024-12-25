@@ -1,5 +1,6 @@
 # Dual Booting Instructions
 
+Before going ahead, if you unsure about any of the steps please contact one of the TAs. 
 
 # How to Dual Boot Windows and Linux (Ubuntu) [FREE]
 
@@ -18,13 +19,13 @@ Dual-booting allows you to use both Windows and Linux on the same computer. Here
    - A working USB port or DVD drive.
 
 3. **Download Ubuntu**:  
-   - Go to the [official Ubuntu website](https://releases.ubuntu.com/focal/). 
-   - Note that we are installing Ubuntu Focal - 20.04 and not the latest version 24.04. This is because ROS-1 is compatible only with Ubuntu 20.04 as of now, so please don't install Ubuntu 24.04.
+   - Go to the [official Ubuntu website](https://releases.ubuntu.com/focal/).  
+   - Note: We are installing Ubuntu Focal (20.04) since ROS-1 is compatible only with Ubuntu 20.04. Please do not install Ubuntu 24.04.
 
 4. **Create a Bootable USB or DVD**:  
-   - Download a tool like [Rufus](https://rufus.ie) (for USB) or use a DVD-burning program.  
-   - Insert a USB drive (at least 8 GB). Ensure that nothing important is there in this USB drive because it needs to be formatted before installing.   
-   - Open Rufus, select the downloaded Ubuntu file (ISO), and create a bootable USB.
+   - Download a tool like [Rufus](https://rufus.ie) (for USB) or use [PowerISO](https://www.poweriso.com/download.htm).  
+   - Insert a USB drive (at least 8 GB). Ensure that nothing important is on the drive, as it will be formatted.  
+   - Open Rufus, select the downloaded Ubuntu ISO file, and create a bootable USB. Refer to [this guide](https://ubuntu.com/tutorials/create-a-usb-stick-on-windows#1-overview).
 
 ---
 
@@ -36,13 +37,15 @@ Dual-booting allows you to use both Windows and Linux on the same computer. Here
    - Uncheck "Turn on fast startup," and save.
 
 2. **Disable Secure Boot (if needed)**:  
-   - Restart your computer and enter the BIOS/UEFI settings (usually by pressing a key like `F2`, `F12`, `DEL`, or `ESC` during startup).  
+   - Restart your computer and enter the BIOS/UEFI settings (usually by pressing `F2`, `F12`, `F10`, or `ESC` during startup).  
    - Look for "Secure Boot" in the settings and disable it. Save and exit.
 
 3. **Create Free Space for Linux**:  
-   - Right-click on the Start button, select "Disk Management."  
-   - Right-click a partition (usually your C: drive), select "Shrink Volume."  
-   - Allocate at least 50 GB for Linux. Leave the space **unallocated** (don’t format it).
+   - Log in to your Windows machine command prompt with an administrative account.  
+   - Right-click the Start Menu and open "Disk Management" by typing `diskmgmt.msc` in the search bar.  
+   - Right-click a partition (usually your C: drive) and select "Shrink Volume."  
+   - Enter the amount of space to shrink (at least 60,000 MB recommended) and click "Shrink."  
+   - Leave the new unallocated space as it is.
 
 ---
 
@@ -52,15 +55,13 @@ Dual-booting allows you to use both Windows and Linux on the same computer. Here
    Plug in the USB or insert the DVD you created earlier.
 
 2. **Restart and Boot from USB/DVD**:  
-   - Restart the computer and enter the boot menu (usually by pressing `F12`, `ESC`, or `F9`).  
-   - Select the USB/DVD to boot from.
+   - Reboot your computer and access the BIOS/UEFI boot menu by pressing `F12`, `F10`, or `F2` (depending on your system).  
+   - Select the USB or DVD as the boot device.
 
 3. **Try Ubuntu or Install Ubuntu**:  
-   When Ubuntu boots, you'll see two options:
    - **Try Ubuntu**: Explore Ubuntu without installing.  
-   - **Install Ubuntu**: Start the installation process.
-
-   Choose **Install Ubuntu**.
+   - **Install Ubuntu**: Start the installation process.  
+   Select **Install Ubuntu** and hit Enter to continue.
 
 ---
 
@@ -75,34 +76,33 @@ Dual-booting allows you to use both Windows and Linux on the same computer. Here
    - Click "Continue."
 
 3. **Select Installation Type**:  
-   Choose **"Install Ubuntu alongside Windows Boot Manager."**  
+   - Choose **"Install Ubuntu alongside Windows Boot Manager."**  
    - If this option isn't available, select "Something Else" and manually partition the unallocated space.  
-   - For manual partitioning:
-     - Create a **Root partition** (`/`) of at least 15 GB (ext4 format).
-     - Optionally, create a **Home partition** (`/home`) for personal files.
-     - Create a **Swap partition** (equal to your RAM size, up to 8 GB).
+   - Create two partitions: one for the root and one for swap.
+     - **Root Partition**:  
+       - Size: Remaining free space minus 10,000 MB.  
+       - Type: Primary.  
+       - File System: EXT4.  
+       - Mount Point: `/`.
+     - **Swap Partition**:  
+       - Size: 10,000 MB.  
+       - Type: Swap Area.
 
-4. **Select Your Location**:  
-   Choose your time zone and click "Continue."
-
-5. **Create a User Account**:  
-   - Enter your name, a username, and a password.  
-   - Remember this password, as you'll need it often.
-
-6. **Begin Installation**:  
-   - Click "Install Now."  
-   - Review the changes and confirm when prompted.  
-   - Wait while Ubuntu installs.
+4. **Start Installation**:  
+   - Click "Install Now" to apply changes. Confirm when prompted.  
+   - Select your location and time zone.  
+   - Create a user account with a username and password.  
+   - Wait for the installation to complete.
 
 ---
 
 ## **5. Configure Boot Options**
 
 1. **Restart After Installation**:  
-   - Remove the USB/DVD when prompted, and press "Enter" to restart.
+   Remove the USB/DVD when prompted and press Enter to restart.
 
 2. **GRUB Bootloader**:  
-   When the computer restarts, you'll see the GRUB menu. This allows you to choose between:
+   Upon restarting, you will see the GRUB menu to choose between:
    - **Ubuntu**: Boots into Linux.
    - **Windows Boot Manager**: Boots into Windows.
 
@@ -118,21 +118,21 @@ Dual-booting allows you to use both Windows and Linux on the same computer. Here
      ```
 
 2. **Access Files from Windows**:  
-   Your Windows files will be accessible from Ubuntu under "Other Locations" in the File Manager.
+   Windows files are accessible from Ubuntu under "Other Locations" in the File Manager.
 
 ---
 
 ## **Tips and Troubleshooting**
 
 1. **Can’t See GRUB Menu?**  
-   - Restart your computer and press `Shift` or `ESC` repeatedly during startup.  
-   - If GRUB still doesn’t show, you may need to repair it using a live USB.
+   - Restart and press `Shift` or `ESC` during startup.  
+   - If GRUB doesn’t show, repair it using a live USB.
 
 2. **Need More Disk Space for Ubuntu?**  
-   You can shrink the Windows partition further using Disk Management.
+   Shrink the Windows partition further using Disk Management.
 
 3. **Switching Between Systems**:  
-   Restart your computer and select the desired OS from the GRUB menu.
+   Restart and select the OS from the GRUB menu.
 
 ---
 
