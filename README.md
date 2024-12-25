@@ -188,8 +188,8 @@ Parallels Desktop allows you to run a virtual machine on your Mac, making it eas
    - Open Parallels from the Applications folder and follow the setup instructions.
 
 3. **Activate Parallels**:
-   - Sign in to your Parallels account.
-   - Enter your license key if required.
+   - Sign in to your Parallels account. Try free version first. 
+   - Enter your license key if required. 
 
 ---
 
@@ -200,16 +200,19 @@ Parallels Desktop allows you to run a virtual machine on your Mac, making it eas
 
 2. **Select Installation Source**:
    - Choose **Install Windows or another OS from a DVD or image file** and click "Continue."
+     ![Step 11](images/step11.png)
 
 3. **Locate Ubuntu ISO**:
    - Click "Choose Manually" and select the Ubuntu ISO file you downloaded.
+   -  ![Step 12](images/step12.png)
 
 4. **Choose Operating System**:
-   - Parallels should automatically detect Ubuntu. If not, select "Linux" and "Ubuntu" manually.
+   - Parallels should automatically detect Ubuntu. 
 
 5. **Set Up the Virtual Machine**:
    - **Name**: Give your virtual machine a name (e.g., "Ubuntu VM").
    - **Location**: Choose a location to store the VM files.
+    ![Step 13](images/step13.png)
 
 6. **Customize Hardware (Optional)**:
    - Allocate resources to the VM:
@@ -225,29 +228,28 @@ Parallels Desktop allows you to run a virtual machine on your Mac, making it eas
 
 1. **Start the Virtual Machine**:
    - Select your newly created virtual machine and click "Start."
+   - Choose Try or Install Ubuntu Server
+     ![Step 14](images/step14.png)
 
 2. **Ubuntu Installation Process**:
    - Select your language and click **Install Ubuntu.**
+     ![Step 15](images/step15.png)
    - Check **Download updates while installing Ubuntu** and **Install third-party software** (optional but recommended).
    - Click **Continue.**
-
-3. **Partitioning**:
-   - Choose **Erase disk and install Ubuntu.** (This applies only to the virtual machine, not your Mac.)
-   - Click **Install Now** and confirm the changes.
-
-4. **Set Your Location**:
-   - Choose your time zone and click **Continue.**
-
-5. **Create a User Account**:
+   - Keep pressing "Done" (without entering anything) until you reach:
+     ![Step 17](images/step17.png)
    - Enter your name, a username, and a password. Click **Continue.**
+     ![Step 18](images/step18.png)
+   - Hit **Continue**
 
 6. **Complete Installation**:
    - Wait for the installation to complete.
-   - Click **Restart Now** when prompted and remove the ISO file from the virtual drive.
+     ![Step 19](images/step19.png)
+   - Click **Reboot Now** when prompted and remove the ISO file from the virtual drive.
 
 ---
 
-## **5. Optimize Ubuntu in Parallels**
+## **5. Optimize Ubuntu in Parallels (Optional step | can skip)**
 
 1. **Install Parallels Tools**:
    - Once Ubuntu boots, click **Actions > Install Parallels Tools** from the Parallels menu.
@@ -261,20 +263,60 @@ Parallels Desktop allows you to run a virtual machine on your Mac, making it eas
 
 ---
 
-## **6. Post-Installation Steps**
+## **6. Updating the system**
 
-1. **Update Ubuntu**:
+1. You will be prompted for user and login password which you chose above. 
+   ![Step 20](images/step20.png)
+
+2. **Update Ubuntu**:
    - Open a terminal (Ctrl+Alt+T) and run:
      ```bash
      sudo apt update && sudo apt upgrade
      ```
+   ![Step 21](images/step21.png)
 
-2. **Install Additional Software**:
-   - Use the "Ubuntu Software" app to download any tools or applications you need.
+3. It will take some time to finish this step, once done, reboot using:
+   ```bash
+   sudo reboot
+   ```
+   
+---
 
-3. **Shared Folders**:
-   - Configure shared folders between macOS and Ubuntu in the Parallels settings.
+## **7. Installing the desktop image**
 
+1. You will be prompted again with the user and login password. 
+   ![Step 20](images/step20.png)
+
+2. **Install desktop image**:
+   - Open a terminal (Ctrl+Alt+T) and run:
+     ```bash
+     sudo apt install ubuntu-desktop 
+     ```
+   ![Step 22](images/step22.png)
+
+3. It will take roughly 10-15 minutes (or more depending on your internet connectivity) to finish this step, once done reboot using:
+   ```bash
+   sudo reboot
+   ```
+   
+---
+
+## **8. Finishing up**
+
+1. **Log in to Ubuntu**:
+   - Enter the password you created earlier to log in.
+     ![Step 23](images/step23.png)
+
+2. **Complete Setup**:
+   - Follow the on-screen prompts to finalize the setup.
+     ![Step 24](images/step24.png)
+
+3. **Verify**:
+   - Reboot one final time to ensure everything is working correctly:
+     ```bash
+     sudo reboot
+     ```
+   
 ---
 
 ## **Tips and Troubleshooting**
