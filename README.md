@@ -15,7 +15,7 @@ Dual-booting allows you to use both Windows and Linux on the same computer. Here
 
 2. **Check System Requirements**  
    Ensure your computer meets the following:
-   - At least 50 GB of free disk space.
+   - At least 60 GB of free disk space.
    - A working USB port or DVD drive.
 
 3. **Download Ubuntu**  
