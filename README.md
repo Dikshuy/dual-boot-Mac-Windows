@@ -19,8 +19,8 @@ Dual-booting allows you to use both Windows and Linux on the same computer. Here
    - A working USB port or DVD drive.
 
 3. **Download Ubuntu**  
-   - Visit the [official Ubuntu website](https://releases.ubuntu.com/focal/) and download the AMD desktop image.  
-   - **Note**: We are using Ubuntu Focal (20.04) as ROS-1 is only compatible with this version. Do **not** download Ubuntu 24.04.
+   - Visit the [official Ubuntu website](https://releases.ubuntu.com/jammy/) and download the AMD desktop image.  
+   - **Note**: We will be using using Ubuntu Jammy (22.04).
 
 4. **Create a Bootable USB or DVD**  
    - Download a tool like [Rufus](https://rufus.ie) for USB or [PowerISO](https://www.poweriso.com/download.htm).  
@@ -171,6 +171,7 @@ Parallels Desktop allows you to run a virtual machine on your Mac, making it eas
    - Visit the [Ubuntu website](https://ubuntu.com/download/desktop) and download the correct version of Ubuntu:
      - **Intel Macs**: Download the standard x86-64 version.
      - **M-series Macs**: Download the ARM64 version.
+     - Please install **Ubuntu 22.04**!
 
 3. **Parallels Account**:
    - Create a Parallels account if you don’t already have one.
