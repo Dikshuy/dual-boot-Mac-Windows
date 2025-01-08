@@ -104,7 +104,7 @@ Before beginning the installation process, ensure your system meets the followin
 \subsection{Required Materials}
 \begin{itemize}
     \item USB drive (minimum 8GB) or blank DVD
-    \item Ubuntu 20.04 ISO image
+    \item Ubuntu 22.04 ISO image
     \item Rufus or similar USB creation tool
 \end{itemize}
 
@@ -116,14 +116,14 @@ Before proceeding with any system modifications, create a complete backup of all
 
 \subsection{Downloading Required Software}
 \begin{enumerate}
-    \item Download Ubuntu 20.04 ISO:
+    \item Download Ubuntu 22.04 ISO:
     \begin{itemize}
-        \item Visit: \url{https://releases.ubuntu.com/focal/}
+        \item Visit: \url{https://releases.ubuntu.com/jammy/}
         \item Select the AMD64 desktop image
     \end{itemize}
-    \begin{note}
-    We will be using ROS Noetic for our assignments which is only compatible with Ubuntu 20.04. Please don't install the latest Ubuntu 24.04 version.
-    \end{note}
+    % \begin{note}
+    % We will be using ROS Noetic for our assignments which is only compatible with Ubuntu 20.04. Please don't install the latest Ubuntu 24.04 version.
+    % \end{note}
     \item Download Rufus:
     \begin{itemize}
         \item Visit: \url{https://rufus.ie}
@@ -415,8 +415,8 @@ Before beginning the Parallels installation, ensure your Mac meets these require
     \item Parallels account
     \item Ubuntu ISO file (correct version for your processor):
     \begin{itemize}
-        \item \textbf{Intel Macs:} Standard x86-64 version from \href{https://releases.ubuntu.com/focal/}{Ubuntu releases}
-        \item \textbf{M-series Macs:} ARM64 version from \href{https://cdimage.ubuntu.com/releases/20.04.5/release/}{Ubuntu ARM releases}
+        \item \textbf{Intel Macs:} Standard x86-64 version from \href{https://releases.ubuntu.com/jammy/}{Ubuntu releases}
+        \item \textbf{M-series Macs:} ARM64 version from \href{https://cdimage.ubuntu.com/releases/22.04.5/release/}{Ubuntu ARM releases}
     \end{itemize}
 \end{itemize}
 
@@ -660,6 +660,9 @@ Coherence mode allows Ubuntu applications to run alongside macOS applications:
 \end{enumerate}
 
 \noindent\rule{\textwidth}{1pt}
+
+\section{ROS Installation}
+Install ROS2 Jazzy Jalisco from: \hyperlink{ROS2}{https://docs.ros.org/en/jazzy/index.html}
 
 % \section{Best Practices for Parallels Usage}
 % \subsection{Performance Optimization}
