@@ -1,0 +1,137 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tcolorbox}
+\usepackage{amsmath}
+\usepackage{xcolor}
+
+\definecolor{warningred}{RGB}{220,53,69}
+\definecolor{linkblue}{RGB}{0,123,255}
+\definecolor{importantblue}{RGB}{0,120,215}
+\definecolor{successgreen}{RGB}{40,167,69}
+\definecolor{macblue}{RGB}{0,100,245}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkblue,
+    filecolor=linkblue,
+    urlcolor=linkblue,
+}
+
+\title{Final Installation Guide}
+\author{TA's: Adam, Monta, Dikshant, and Jasper}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+This document provides comprehensive installation instructions for Ubuntu and ROS based on your operating system (Windows or Mac). Please read the instructions carefully as there are specific requirements and limitations for different systems.
+
+\section{Windows Users}
+\subsection{Required Configuration}
+\begin{tcolorbox}[
+    title={Final Configuration for Windows Users}, colframe=successgreen,colback=successgreen!10
+]
+    \begin{itemize}
+        \item Operating System: Ubuntu 22.04 (Dual Boot)
+        \item ROS Version: ROS Humble or ROS Jazzy
+    \end{itemize}
+    \textbf{\textcolor{warningred}{Important Note:}} While ROS Jazzy is compatible with Ubuntu 24.04, for Duckiebot compatibility, you must use Ubuntu 22.04.
+\end{tcolorbox}
+
+\subsection{Installation Process}
+\begin{enumerate}
+    \item First, prepare your system for dual booting
+    \item Download Ubuntu 22.04 ISO from the official Ubuntu website
+    \item Follow the dual booting instructions provided \href{https://github.com/Dikshuy/dual-boot-Mac-Windows/blob/main/ubuntu-installation.pdf}{here}
+    \item After Ubuntu installation, proceed with ROS Humble/Jazzy installation
+\end{enumerate}
+
+\section{Mac Users}
+\subsection{Required Configuration}
+\begin{tcolorbox}[
+    title={Options for Mac Users}, colframe=macblue,colback=macblue!10
+]
+    \begin{itemize}
+        \item Operating System: Ubuntu 22.04 or 24.04 (Virtual Machine)
+        \item ROS Version: ROS Humble or ROS Jazzy
+        \item Virtualization Software Options:
+        \begin{itemize}
+            \item UTM (Free)
+            \item Parallels (Paid)
+        \end{itemize}
+    \end{itemize}
+\end{tcolorbox}
+
+\subsection{Important Limitations}
+\begin{tcolorbox}[
+    colframe=warningred,
+    colback=warningred!5,
+    title={\textcolor{warningred}{Critical Information for Mac Users}},
+    fonttitle=\bfseries
+]
+Due to architecture compatibility issues (ARM vs. AMD), Mac users will face limitations:
+\begin{itemize}
+    \item Mac's ARM architecture is not compatible with Duckiebot's AMD requirements
+    \item You will not be able to complete all assignments using your Mac setup
+    \item \textbf{Required Action:} Partner with Windows/Linux users for assignments and final project
+\end{itemize}
+\end{tcolorbox}
+
+\subsection{Installation Options}
+\subsubsection{UTM (Free Option)}
+\begin{itemize}
+    \item Provides basic virtualization capabilities
+    \item Suitable for course learning
+    \item May have some performance limitations
+\end{itemize}
+
+\subsubsection{Parallels (Paid Option)}
+\begin{itemize}
+    \item More stable performance
+    \item Better flexibility and features
+    \item Not required for basic course needs
+\end{itemize}
+
+\section{Summary of Final Configurations}
+\begin{tcolorbox}[
+    title={Quick Reference Guide},
+    colframe=importantblue,
+    colback=white
+]
+\textbf{Windows Users:}
+\begin{itemize}
+    \item Ubuntu 22.04 (Dual Boot) + ROS Humble/Jazzy
+    \item Full compatibility with all course requirements
+    \item Can work independently on all assignments
+\end{itemize}
+
+\textbf{Mac Users:}
+\begin{itemize}
+    \item Ubuntu 22.04/24.04 on UTM/Parallels + ROS Humble/Jazzy
+    \item Limited compatibility due to architecture differences
+    \item Must partner with Windows/Linux users for assignments
+\end{itemize}
+\end{tcolorbox}
+
+\section{Additional Resources}
+Please refer to the following resources for detailed installation instructions:
+\begin{itemize}
+    \item Course documentation for \href{https://github.com/Dikshuy/dual-boot-Mac-Windows/blob/main/ubuntu-installation.pdf}{dual booting instructions}
+    \item Video tutorials for \href{https://www.youtube.com/watch?v=QKn5U2esuRk}{Windows installation} 
+    \item \href{https://www.youtube.com/watch?v=O19mv1pe76M}{UTM installation guide} for Mac users 
+    \item \href{https://www.youtube.com/watch?v=56n2q6-MXX8&t=305s}{Parallels installation guide} for Mac users 
+\end{itemize}
+
+\section{Support}
+If you encounter any issues during installation:
+\begin{itemize}
+    \item Consult the course TAs during office hours (TBA soon)
+    \item Post your questions on the \texttt{\#computer-setup} slack channel
+\end{itemize}
+
+\end{document}
